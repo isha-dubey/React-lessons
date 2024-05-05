@@ -11,27 +11,51 @@
 
  </div>
 
- <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-
-    <script>
+ <!-- add above two and then add babel -->
+ <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
 // const root = document.getElementById("root")
 // const element = document.createElement("span")
 // element.className= "container"
 // element.textContent = "hello all"
 // root.appendChild(element)
 
+// const root1 = document.getElementById("root1")
+// const element = React.createElement('div' , {
+//     className : 'container' ,
+//     children : 'hello Students'
+
+// })
+// ReactDOM.render(element,root1)
+
+
+//+++++++++++++++OR we cn use 
+
+// const element = React.createElement("span" , {
+//         className : "Container"
+//     } , 
+
+//     ['hello students' , React.createElement("span" , {
+//         children : "  {what's up}" })
+//     ]
+// )
+// ReactDOM.render(element , root1)
+
+// +++++++ interpolation 
+
 const root1 = document.getElementById("root1")
-const element = React.createElement('div' , {
-    className : 'container' ,
-    children : 'hello Students'
+const greeting = "hello students "
+const element = (
+    <div className = "container">
+        {greeting}
+        <span>what's up</span>
+        </div>
 
-})
-ReactDOM.render(element,root1)
-    </script>
-       
+)
+ReactDOM.render(element , root1)
 
-
-
+</script>
 </body>
 </html>
