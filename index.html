@@ -44,16 +44,43 @@
 // ReactDOM.render(element , root1)
 
 // +++++++ interpolation 
+// (at line 53) we can only use interpolation for expressions and not statements 
+
+// const root1 = document.getElementById("root1")
+// const greeting = ""
+// const element = (
+//     <div className = "container">
+//         {greeting ? greeting : "hello "}
+//         <span>what's up</span>
+//         </div>
+// )
+
+// there is a rule in jsx that it must contain a parent element 
+// toh there we use <> or <React.fragment>
+
+// const root1 = document.getElementById("root1")
+// const greeting = "Hellon "
+// const onclickspan = () => {
+//     alert("span clicked")
+// }
+// const element = (
+//     <>
+//    {/*  <span> {greeting} </span>  */}
+//     <span  onClick = {onclickspan}>{greeting} </span>
+//     <span> whats up </span>
+//     </>
+// )
+// ReactDOM.render(element , root1)
+
+// ++++++++ Props and component +++++++++
 
 const root1 = document.getElementById("root1")
-const greeting = "hello students "
-const element = (
-    <div className = "container">
-        {greeting}
-        <span>what's up</span>
-        </div>
+const greeting = "Hellon "
+const Welcome = (Props) => {
+    return <h1> HELLO , {Props.name} </h1>
+}
+const element = <Welcome name= "alice" />
 
-)
 ReactDOM.render(element , root1)
 
 </script>

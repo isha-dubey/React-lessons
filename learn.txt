@@ -75,3 +75,15 @@ const element = (
 ReactDOM.render(element , root1)
 
 
+++++++++++ pROPS AND REACT COMPONENT +++++
+In React, props (short for properties) are a key mechanism for passing data and event handlers down to child components from a parent component
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+// Using the component with props
+const element = <Welcome name="Alice" />;
+
+
+
